@@ -1,0 +1,36 @@
+package comparators;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+public class Comparators {
+    public static void main(String[] args) {
+    Scanner input=new Scanner(System.in);
+        System.out.println("Enter the number to sort them: ");
+        int n=input.nextInt();
+        Player [] p=new Player[n];
+        check a=new check();
+        System.out.println("Enter Players name and score:");
+        for(int i=0;i<n;i++)
+         p[i]=new Player(input.next(),input.nextInt());
+         Arrays.sort(p, a);
+                      System.out.println("");
+
+         for(int i=0;i<p.length;i++)
+             System.out.println(p[i].name+" "+p[i].score);
+    }
+ static class Player {
+private String name;
+private int score;
+    public Player(String name, int score) {
+        this.name = name;
+        this.score = score;}}
+  static class check implements Comparator<Player>{
+ public int compare(Player A,Player B){
+ if(A.score==B.score)
+     return A.name.compareTo(B.name);
+ return B.score-A.score;
+ } 
+         
+}
+
+}
