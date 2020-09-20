@@ -1,0 +1,18 @@
+package removeduble;
+import java.util.Scanner;
+public class RemoveDuble {
+    public static void main(String[] args) {
+   Scanner input=new Scanner (System.in);
+        System.out.println("Enter Sentence:");
+        String a=input.nextLine();
+       String[] b=a.split("\\s");
+       for(int i=0;i<b.length;i++){
+           for(int j=0;j<b.length;j++){
+               if(b[i].equals(b[j])){
+                   if(i!=j)
+                       b[i]="";}}}
+       for(int i=0;i<b.length;i++){
+        if(b[i]!="")
+               System.out.print(b[i]+" ");}
+    } 
+}
