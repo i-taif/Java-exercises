@@ -1,0 +1,26 @@
+package exeptionhandling;
+
+import java.util.Scanner;
+public class ExeptionHandling {
+    static Scanner input=new Scanner(System.in);
+    public static void main(String[] args) {
+        System.out.println("Enter the base:");
+    int base=input.nextInt();
+        System.out.println("Enter the power:");
+    int power=input.nextInt();
+    Power(base,power);
+    }
+  static void Power(int n,int p){
+  try{
+  if(n<0||p<0)
+      throw new Exception("n and p shoud be non-negative ");
+      System.out.println("Result:"+Math.pow(n,p));
+  }
+  catch(Exception e){
+      System.out.println("Try agin,Please Enter positive number for the Base and Power: ");
+      int base=input.nextInt();
+      int pow=input.nextInt();
+      System.out.println("Result: "+ Math.pow(base,pow));
+  }
+  }  
+}
